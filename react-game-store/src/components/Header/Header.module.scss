@@ -1,0 +1,47 @@
+@import 'src/styles/mixins.scss';
+@import 'src/styles/color.variables.scss';
+
+.header {
+    @include text(26px, 600);
+    grid-area: header;
+    background: $main-background-color;
+    color: $main-font-color;
+    padding: 4px 128px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        height: 100%;
+    }
+    .menuBtn {
+        cursor: pointer;
+    }
+    .menu {
+        @include text(18px, 400);
+        position: absolute;
+        z-index: 2;
+        right: 32px;
+        top: 48px;
+        padding: 8px;
+        border: 1px solid $manatee;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background-color: $dark-color;
+    }
+    @media (max-width: 1400px) {
+        padding: 4px 64px;
+    }
+    @media (max-width: 1199px) {
+        gap: 30px;
+    }
+    @media (max-width: 1024px) {
+        gap: 8px;
+    }
+    @media (max-width: 880px) {
+        padding: 4px 32px;
+    }
+}

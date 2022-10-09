@@ -1,0 +1,22 @@
+@import 'src/styles/mixins.scss';
+@import 'src/styles/color.variables.scss';
+
+.genres {
+    width: 100%;
+    min-height: 84px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    button {
+        @include text(20px);
+        color: $second-font-color;
+        &:hover {
+            color: $main-font-color;
+        }
+    }
+    .activeGenre {
+        color: $main-font-color;
+    }
+}

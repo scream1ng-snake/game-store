@@ -1,0 +1,21 @@
+@import "./color.variables.scss";
+
+@mixin flexGapDirection($gap:0, $direction:row) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+@mixin flexCenterDirection($dir:row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $dir;
+}
+@mixin text($fontSize: 18px, $fontWeight: 500){
+    font-family: 'Anek Latin', sans-serif;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    font-style: normal;
+    line-height: 1;
+    color: $main-font-color;
+}
